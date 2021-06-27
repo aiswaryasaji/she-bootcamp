@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -71,32 +72,34 @@
            <h3>Hurry up! and Experience the journey with us!</h3>
            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. ... Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
-      
+           
+   <div class="container center"> 
+    <button onclick="changecontent()">know more</button>
+   <p id="know-more">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna. ... Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+   </div>
    </section>
    <section id='forms'>
     <div class="container">
-           <h4>Register Here</h4>
-    </div>
-             <div class="container">
-                 
-                    <div class="container"> 
-                 <form style="text-align:center;justify-content:center;">
+        <h4 >Register Here</h4>
+        </div>
+    <div class="container"> 
+                 <form style="text-align:center;justify-content:center;" onsubmit="return validation()">
                     <div class="form">
                         <label>NAME</label>
-                     <input type='Text'>
+                        <input id="name-input" type='Text' name="name">
+                        <p id="name-validation">Enter Name</p>
                     </div>
                     <div class="form"> 
                         <label>EMAIL</label>
-                        <input type='email'>
+                        <input id="email-input" type='email' name="email">
+                        <p id="email-validation">Email can not be empty</p>
                     </div>
                     <div class="form">
                         <label>BATCH</label>
-                        <input type="password" >
-                        
+                        <input id="batch-input" type="password" name="batch">
+                        <p id="batch-validation">Enter Batch</p> 
                     </div>
-                    <div class="container">
-                        <input type='submit'>
-                    </div>
+                    <input type='submit'>
                  </form>
              </div>
    </section>
